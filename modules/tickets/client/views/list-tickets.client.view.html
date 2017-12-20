@@ -2,6 +2,22 @@
   <div class="page-header">
     <h1>Tickets</h1>
   </div>
+  <br>
+  <fieldset>
+    <div>
+      <table class="table table-striped">
+        <tr >
+          <td><b>RefNo</b></td>
+          <td><b>From</b></td>
+          <td><b>To</b></td>
+          <td><b>Class</b></td>
+          <td><b>Type</b></td>
+          <td><b>Price</b></td>
+          <td><b>Date</b></td>
+        </tr>
+      </table>
+    </div>
+  </fieldset>
   <div class="list-group">
     <a ng-repeat="ticket in vm.tickets"
        ui-sref="tickets.view({ ticketId: ticket._id })"
@@ -16,6 +32,7 @@
       <h4 class="list-group-item-heading" ng-bind="ticket.name"></h4>
     </a>
   </div>
+  <br>
   <div class="alert alert-warning text-center" ng-if="vm.tickets.$resolved && !vm.tickets.length">
     No Tickets yet, why don't you <a ui-sref="tickets.create">create one</a>?
   </div>
