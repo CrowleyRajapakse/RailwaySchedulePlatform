@@ -10,10 +10,10 @@ var mongoose = require('mongoose'),
  * Ticket Schema
  */
 var TicketSchema = new Schema({
-  name: {
+  tclass: {
     type: String,
     default: '',
-    required: 'Please fill Ticket name',
+    required: 'Please select Ticket class',
     trim: true
   },
   created: {
